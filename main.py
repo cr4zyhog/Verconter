@@ -1,16 +1,15 @@
 import os
 from pyexpat.errors import messages
-
 import flask
 
 app = flask.Flask(__name__)
-app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+app.config['SECRET_KEY'] = '23456fusaftdr68fty32hhwftr6tyJBHFY&RtqgevgutiOHOPU_$$UnWDjk'
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return 'Hello!'
+    return flask.render_template('main.html')
 
 
 def main():
