@@ -1,5 +1,4 @@
 import os
-from pyexpat.errors import messages
 import flask
 
 app = flask.Flask(__name__)
@@ -10,6 +9,23 @@ app.config['SECRET_KEY'] = '23456fusaftdr68fty32hhwftr6tyJBHFY&RtqgevgutiOHOPU_$
 @app.route('/index')
 def index():
     return flask.render_template('main.html')
+
+
+@app.route('/history')
+def history():
+    return 'пока не готово'
+
+
+@app.route('/converter')
+def converter():
+    return 'пока не готово'
+
+
+@app.route('/images/<imagename>')
+def image(imagename):
+    a = os.getcwd() + f'/images/{imagename}'
+    return flask.send_file(a)
+
 
 
 def main():
