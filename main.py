@@ -15,7 +15,7 @@ from data import db_session
 app = flask.Flask(__name__)
 app.config['SECRET_KEY'] = '23456fusaftdr68fty32hhwftr6tyJBHFY&RtqgevgutiOHOPU_$$UnWDjk'
 
-UPLOAD_FOLDER = 'C:\\PycharmProjects\\Verconter\\uploads'
+UPLOAD_FOLDER = '/home/Verconter/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 first_file = ''
@@ -240,6 +240,9 @@ def converter():
     if os.name == 'nt':
         os.system('del /Q C:\\PycharmProjects\\Verconter\\uploads')
         os.system('mkdir C:\\PycharmProjects\\Verconter\\uploads')
+    elif os.name == 'posix':
+        os.system('rm -f -r /home/Verconter/uploads')
+        os.system('mkdir /home/Verconter/uploads')
     return redirect('/converter_first')
 
 
