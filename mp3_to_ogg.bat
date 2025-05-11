@@ -1,4 +1,4 @@
 
                                                 cd C:\PycharmProjects\Verconter\uploads
-                                                ffmpeg -i "Drake_-_Toosie_Slideadsdas.mp3" "Drake_-_Toosie_Slideadsdas.ogg"
+                                                ffmpeg -i "lego-breaking.mp3" "lego-breaking.ogg"
                                                 
